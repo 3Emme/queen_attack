@@ -4,8 +4,10 @@ namespace QueenAttack{
   public class Game
   {
     // public properties
-    public object VictimQueen { get; set; }
-    public object AttackQueen { get; set; }
+    public int QueenX { get; set; }
+    public int QueenY { get; set; }
+    public int VictimX { get; set; }
+    public int VictimY { get; set; }
     public int BoardXLimit { get; set; }
     public int BoardYLimit { get; set; }
     public bool ConfirmedHit { get; set; }
@@ -13,17 +15,19 @@ namespace QueenAttack{
 
     // {x:1,y:1}
     //constructor
-    public Game(object victimQueen, object attackQueen) 
+    public Game(int queenX, int queenY, int victimX, int victimY ) 
     {
-      VictimQueen = victimQueen;
-      AttackQueen = attackQueen;
+      QueenX = queenX;
+      QueenY = queenY;
+      VictimX = victimX;
+      VictimY = victimY;
       bool ConfirmedHit = false;
     }
 
     // public method
     public bool SearchAndDestroy()
     {
-      Console.WriteLine("SEARCH AND DESTROY");
+      Console.WriteLine("SEARCH AND DESTROY start");
       CheckX();
       CheckY();
       CheckNE();
@@ -36,8 +40,8 @@ namespace QueenAttack{
     // private methods
     private void CheckX()
     {
-      Console.WriteLine("CHECK X");
-      if (AttackQueen["x"] == VictimQueen["x"])
+      Console.WriteLine("CHECK X start");
+      if (QueenX == VictimX)
       {
         ConfirmedHit = true;
         Console.WriteLine("HIT X");
@@ -45,10 +49,12 @@ namespace QueenAttack{
     }
     private void CheckY()
     {
-      // if (AttackQueen.yCoord == VictimQueen.yVCoord)
-      // {
-      //   ConfirmedHit = true;
-      // }
+      Console.WriteLine("CHECK Y start");
+      if (QueenY == VictimY)
+      {
+        ConfirmedHit = true;
+        Console.WriteLine("HIT Y");
+      }
     }
     private void CheckNE()
     {
