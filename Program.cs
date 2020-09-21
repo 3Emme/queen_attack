@@ -25,7 +25,11 @@ namespace QueenAttack{
       int yVCoord = int.Parse(vCoords[1]);
       Dictionary<string, int> victimCoords = new Dictionary<string, int>() {{"x",xVCoord}, {"y",yVCoord}};
       Console.WriteLine(victimCoords["x"].ToString());
-      Console.WriteLine(victimCoords["y"].ToString());      
+      Console.WriteLine(victimCoords["y"].ToString());
+      // if queen coords = victum coords then alert! 
+      Game queen = new Game(attackQueenCoords,victimCoords);
+      queen.SearchAndDestroy();
+
     }
   }
 }

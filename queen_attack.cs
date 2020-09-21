@@ -23,6 +23,7 @@ namespace QueenAttack{
     // public method
     public bool SearchAndDestroy()
     {
+      Console.WriteLine("SEARCH AND DESTROY");
       CheckX();
       CheckY();
       CheckNE();
@@ -35,42 +36,42 @@ namespace QueenAttack{
     // private methods
     private void CheckX()
     {
-      // if (VictimQueen.X == AttackQueen.Y)
-      // {
-      //   ConfirmedHit = true;
-      // }
+      Console.WriteLine("CHECK X");
+      if (AttackQueen["x"] == VictimQueen["x"])
+      {
+        ConfirmedHit = true;
+        Console.WriteLine("HIT X");
+      }
     }
     private void CheckY()
     {
-      // if (VictimQueen.X == AttackQueen.Y)
+      // if (AttackQueen.yCoord == VictimQueen.yVCoord)
       // {
       //   ConfirmedHit = true;
       // }
     }
     private void CheckNE()
     {
-      // if (VictimQueen.X == AttackQueen.Y)
-      // {
-      //   ConfirmedHit = true;
-      // }
+      // int distanceToCorner =
+      // for (int i = 0, i< )
     }
     private void CheckSE()
     {
-      // if (VictimQueen.X == AttackQueen.Y)
+      // if (AttackQueen.xCoord == VictimQueen.xVCoord)
       // {
       //   ConfirmedHit = true;
       // }
     }
     private void CheckSW()
     {
-      // if (VictimQueen.X == AttackQueen.Y)
+      // if (AttackQueen.xCoord == VictimQueen.xVCoord)
       // {
       //   ConfirmedHit = true;
       // }
     }
     private void CheckNW()
     {
-      // if (VictimQueen.X == AttackQueen.Y)
+      // if (AttackQueen.xCoord == VictimQueen.xVCoord)
       // {
       //   ConfirmedHit = true;
       // }
