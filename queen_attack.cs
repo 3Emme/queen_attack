@@ -15,14 +15,14 @@ namespace QueenAttack{
 
     // {x:1,y:1}
     //constructor
-    public Game(int queenX, int queenY, int victimX, int victimY ) 
+    public Game(int queenX, int queenY, int victimX, int victimY, int gameSize ) 
     {
       QueenX = queenX;
       QueenY = queenY;
       VictimX = victimX;
       VictimY = victimY;
-      BoardXLimit = 8;
-      BoardYLimit = 8;
+      BoardXLimit = gameSize;
+      BoardYLimit = gameSize;
       bool ConfirmedHit = false;
     }
 
