@@ -75,27 +75,30 @@ namespace QueenAttack{
         queenPosition[1] += 1;
       }
     }
-    private void CheckSE()
+    private void CheckSE() // x 8 y 1
     {
-      int[] queensCoords = {QueenX,QueenY};
-      // if (AttackQueen.xCoord == VictimQueen.xVCoord)
-      // {
-      //   ConfirmedHit = true;
-      // }
+      Console.WriteLine("CHECK SE start");
+      int[] queenPosition = {QueenX,QueenY};
+      int[] victimPosition = {VictimX,VictimY};
+      while (queenPosition[0] <= BoardXLimit && queenPosition[1] >= 1)
+      {
+        Console.WriteLine(queenPosition[0]);
+        Console.WriteLine(queenPosition[1]);
+        if ((queenPosition[0] == victimPosition[0]) && (queenPosition[1] == victimPosition[1])){
+          ConfirmedHit = true;
+          Console.WriteLine("HIT SE");
+        }
+        queenPosition[0] += 1;
+        queenPosition[1] -= 1;
+      }
     }
-    private void CheckSW()
+    private void CheckSW() // x 1 y 1
     {
-      // if (AttackQueen.xCoord == VictimQueen.xVCoord)
-      // {
-      //   ConfirmedHit = true;
-      // }
+      
     }
-    private void CheckNW()
+    private void CheckNW() // x 1 y 8 
     {
-      // if (AttackQueen.xCoord == VictimQueen.xVCoord)
-      // {
-      //   ConfirmedHit = true;
-      // }
+      
     }
   }
 }
