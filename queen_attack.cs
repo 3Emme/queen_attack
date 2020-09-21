@@ -94,7 +94,20 @@ namespace QueenAttack{
     }
     private void CheckSW() // x 1 y 1
     {
-      
+      Console.WriteLine("CHECK SW start");
+      int[] queenPosition = {QueenX,QueenY};
+      int[] victimPosition = {VictimX,VictimY};
+      while (queenPosition[0] >= 1 && queenPosition[1] >= 1)
+      {
+        Console.WriteLine(queenPosition[0]);
+        Console.WriteLine(queenPosition[1]);
+        if ((queenPosition[0] == victimPosition[0]) && (queenPosition[1] == victimPosition[1])){
+          ConfirmedHit = true;
+          Console.WriteLine("HIT SW");
+        }
+        queenPosition[0] -= 1;
+        queenPosition[1] -= 1;
+      }
     }
     private void CheckNW() // x 1 y 8 
     {
