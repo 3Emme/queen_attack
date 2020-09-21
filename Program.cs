@@ -30,7 +30,9 @@ namespace QueenAttack{
       // Console.WriteLine(victimCoords["y"].ToString());
       // if queen coords = victum coords then alert! 
       Game queen = new Game(xCoord,yCoord,xVCoord,yVCoord);
-      queen.SearchAndDestroy();
+      if (queen.SearchAndDestroy()) {
+        Console.WriteLine("Queen scored a HIT");
+      }
 
     }
   }
