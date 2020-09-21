@@ -1,0 +1,11 @@
+C:\Users\Owner\Epicodus\C#\exercise_work\queen_attack\bin\Debug\netcoreapp2.2\queen_attack.deps.json
+C:\Users\Owner\Epicodus\C#\exercise_work\queen_attack\bin\Debug\netcoreapp2.2\queen_attack.runtimeconfig.json
+C:\Users\Owner\Epicodus\C#\exercise_work\queen_attack\bin\Debug\netcoreapp2.2\queen_attack.runtimeconfig.dev.json
+C:\Users\Owner\Epicodus\C#\exercise_work\queen_attack\bin\Debug\netcoreapp2.2\queen_attack.dll
+C:\Users\Owner\Epicodus\C#\exercise_work\queen_attack\bin\Debug\netcoreapp2.2\queen_attack.pdb
+C:\Users\Owner\Epicodus\C#\exercise_work\queen_attack\obj\Debug\netcoreapp2.2\queen_attack.csprojAssemblyReference.cache
+C:\Users\Owner\Epicodus\C#\exercise_work\queen_attack\obj\Debug\netcoreapp2.2\queen_attack.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Epicodus\C#\exercise_work\queen_attack\obj\Debug\netcoreapp2.2\queen_attack.AssemblyInfoInputs.cache
+C:\Users\Owner\Epicodus\C#\exercise_work\queen_attack\obj\Debug\netcoreapp2.2\queen_attack.AssemblyInfo.cs
+C:\Users\Owner\Epicodus\C#\exercise_work\queen_attack\obj\Debug\netcoreapp2.2\queen_attack.dll
+C:\Users\Owner\Epicodus\C#\exercise_work\queen_attack\obj\Debug\netcoreapp2.2\queen_attack.pdb
