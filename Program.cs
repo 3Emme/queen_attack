@@ -4,6 +4,14 @@ using System.Collections.Generic;
 namespace QueenAttack{
     class Program
   {
+    public static void PrintMap(string[][] masterArray)
+      {
+        foreach (string[] array in masterArray) 
+        {
+          string mapLine = string.Join("  ",array);
+          Console.WriteLine(mapLine);
+        }
+      }
     public static void Main()
     {
 
@@ -11,21 +19,38 @@ namespace QueenAttack{
       string sizeInput= Console.ReadLine();
       int gameSize = int.Parse(sizeInput);
 
-      // MAP!
-      int mapsize = 0;
+      // CREATE MAP!      
       string[][] masterArray = new string[gameSize][]; // Y axis set
       for (int i=0;i<gameSize;i++) // X axis set
       {
         masterArray[i] = new string[gameSize];
       }
-      foreach (string[] array in masterArray) {
-        for (int i=0;i<array.Length;i++) {
-          array[i] = "0";
-          //Console.WriteLine(array[i]);
+      // FILL OUT MAP WITH 0's
+      foreach (string[] array in masterArray) 
+      {
+        for (int i=0;i<array.Length;i++) 
+        {
+          array[i] = "0";          
         } 
-        string mapLine = string.Join("  ",array);
-        Console.WriteLine(mapLine);
       }
+      PrintMap(masterArray);
+
+
+
+      // int mapsize = 0;
+      // string[][] masterArray = new string[gameSize][]; // Y axis set
+      // for (int i=0;i<gameSize;i++) // X axis set
+      // {
+      //   masterArray[i] = new string[gameSize];
+      // }
+      // foreach (string[] array in masterArray) {
+      //   for (int i=0;i<array.Length;i++) {
+      //     array[i] = "0";
+      //     //Console.WriteLine(array[i]);
+      //   } 
+      //   string mapLine = string.Join("  ",array);
+      //   Console.WriteLine(mapLine);
+      // }
   
 
 
