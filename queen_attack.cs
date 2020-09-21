@@ -65,8 +65,8 @@ namespace QueenAttack{
       int[] victimPosition = {VictimX,VictimY};
       while (queenPosition[0] <= BoardXLimit && queenPosition[1] <= BoardYLimit)
       {
-        Console.WriteLine(queenPosition[0]);
-        Console.WriteLine(queenPosition[1]);
+        //Console.WriteLine(queenPosition[0]);
+        //Console.WriteLine(queenPosition[1]);
         if ((queenPosition[0] == victimPosition[0]) && (queenPosition[1] == victimPosition[1])){
           ConfirmedHit = true;
           Console.WriteLine("HIT NE");
@@ -82,8 +82,8 @@ namespace QueenAttack{
       int[] victimPosition = {VictimX,VictimY};
       while (queenPosition[0] <= BoardXLimit && queenPosition[1] >= 1)
       {
-        Console.WriteLine(queenPosition[0]);
-        Console.WriteLine(queenPosition[1]);
+        //Console.WriteLine(queenPosition[0]);
+        //Console.WriteLine(queenPosition[1]);
         if ((queenPosition[0] == victimPosition[0]) && (queenPosition[1] == victimPosition[1])){
           ConfirmedHit = true;
           Console.WriteLine("HIT SE");
@@ -99,8 +99,8 @@ namespace QueenAttack{
       int[] victimPosition = {VictimX,VictimY};
       while (queenPosition[0] >= 1 && queenPosition[1] >= 1)
       {
-        Console.WriteLine(queenPosition[0]);
-        Console.WriteLine(queenPosition[1]);
+        //Console.WriteLine(queenPosition[0]);
+        //Console.WriteLine(queenPosition[1]);
         if ((queenPosition[0] == victimPosition[0]) && (queenPosition[1] == victimPosition[1])){
           ConfirmedHit = true;
           Console.WriteLine("HIT SW");
@@ -116,8 +116,8 @@ namespace QueenAttack{
       int[] victimPosition = {VictimX,VictimY};
       while (queenPosition[0] >= 1 && queenPosition[1] <= BoardYLimit)
       {
-        Console.WriteLine(queenPosition[0]);
-        Console.WriteLine(queenPosition[1]);
+        //Console.WriteLine(queenPosition[0]);
+        //Console.WriteLine(queenPosition[1]);
         if ((queenPosition[0] == victimPosition[0]) && (queenPosition[1] == victimPosition[1])){
           ConfirmedHit = true;
           Console.WriteLine("HIT NW");

@@ -6,11 +6,15 @@ namespace QueenAttack{
   {
     public static void PrintMap(string[][] masterArray)
       {
+        Array.Reverse(masterArray);
+        Console.WriteLine("Map Start");
         foreach (string[] array in masterArray) 
         {
           string mapLine = string.Join("  ",array);
           Console.WriteLine(mapLine);
         }
+        Console.WriteLine("Map End");
+        Array.Reverse(masterArray);
       }
     public static void Main()
     {
@@ -35,25 +39,6 @@ namespace QueenAttack{
       }
       PrintMap(masterArray);
 
-
-
-      // int mapsize = 0;
-      // string[][] masterArray = new string[gameSize][]; // Y axis set
-      // for (int i=0;i<gameSize;i++) // X axis set
-      // {
-      //   masterArray[i] = new string[gameSize];
-      // }
-      // foreach (string[] array in masterArray) {
-      //   for (int i=0;i<array.Length;i++) {
-      //     array[i] = "0";
-      //     //Console.WriteLine(array[i]);
-      //   } 
-      //   string mapLine = string.Join("  ",array);
-      //   Console.WriteLine(mapLine);
-      // }
-  
-
-
     
       // INPUT FOR QUEEN'S COORDINATES
       Console.WriteLine("Enter coordinates for the ATTACK QUEEN: ");
@@ -64,6 +49,10 @@ namespace QueenAttack{
       int xCoord = int.Parse(coords[0]);
       int yCoord = int.Parse(coords[1]);
 
+      //print queens location
+      
+      masterArray[yCoord-1][xCoord-1] = "Q";
+      PrintMap(masterArray);
       
       // INPUT FOR QUEEN'S VICTIM
       Console.WriteLine("Enter coordinates for the QUEEN's VICTIM: ");
@@ -73,6 +62,9 @@ namespace QueenAttack{
       // check if it was only 2 numbers! 
       int xVCoord = int.Parse(vCoords[0]);
       int yVCoord = int.Parse(vCoords[1]);
+
+      masterArray[yVCoord-1][xVCoord-1] = "V";
+      PrintMap(masterArray);
 
 
       
