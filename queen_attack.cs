@@ -111,7 +111,20 @@ namespace QueenAttack{
     }
     private void CheckNW() // x 1 y 8 
     {
-      
+      Console.WriteLine("CHECK NW start");
+      int[] queenPosition = {QueenX,QueenY};
+      int[] victimPosition = {VictimX,VictimY};
+      while (queenPosition[0] >= 1 && queenPosition[1] <= BoardYLimit)
+      {
+        Console.WriteLine(queenPosition[0]);
+        Console.WriteLine(queenPosition[1]);
+        if ((queenPosition[0] == victimPosition[0]) && (queenPosition[1] == victimPosition[1])){
+          ConfirmedHit = true;
+          Console.WriteLine("HIT NW");
+        }
+        queenPosition[0] -= 1;
+        queenPosition[1] += 1;
+      }
     }
   }
 }
