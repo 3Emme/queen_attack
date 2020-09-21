@@ -21,6 +21,8 @@ namespace QueenAttack{
       QueenY = queenY;
       VictimX = victimX;
       VictimY = victimY;
+      BoardXLimit = 8;
+      BoardYLimit = 8;
       bool ConfirmedHit = false;
     }
 
@@ -58,11 +60,24 @@ namespace QueenAttack{
     }
     private void CheckNE()
     {
-      // int distanceToCorner =
-      // for (int i = 0, i< )
+      Console.WriteLine("CHECK NE start");
+      int[] queenPosition = {QueenX,QueenY};
+      int[] victimPosition = {VictimX,VictimY};
+      while (queenPosition[0] <= BoardXLimit && queenPosition[1] <= BoardYLimit)
+      {
+        Console.WriteLine(queenPosition[0]);
+        Console.WriteLine(queenPosition[1]);
+        if ((queenPosition[0] == victimPosition[0]) && (queenPosition[1] == victimPosition[1])){
+          ConfirmedHit = true;
+          Console.WriteLine("HIT NE");
+        }
+        queenPosition[0] += 1;
+        queenPosition[1] += 1;
+      }
     }
     private void CheckSE()
     {
+      int[] queensCoords = {QueenX,QueenY};
       // if (AttackQueen.xCoord == VictimQueen.xVCoord)
       // {
       //   ConfirmedHit = true;
