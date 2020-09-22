@@ -34,7 +34,7 @@ namespace QueenAttack{
       {
         for (int i=0;i<array.Length;i++) 
         {
-          array[i] = "0";          
+          array[i] = ".";          
         } 
       }
       PrintMap(masterArray);
@@ -70,9 +70,23 @@ namespace QueenAttack{
       
       Game queen = new Game(xCoord,yCoord,xVCoord,yVCoord,gameSize);
       if (queen.SearchAndDestroy()) {
+        // draw hitPath( using )
+        // printMap(MasterArray);
+        foreach(int[] array in queen.HitPath)
+        {
+          masterArray[array[0]-1][array[1]-1] = "*";
+        }
+        PrintMap(masterArray);
+
         Console.WriteLine("------------------------");
         Console.WriteLine("-                      -");
         Console.WriteLine("-  Queen scored a HIT  -");
+        Console.WriteLine("-                      -");
+        Console.WriteLine("------------------------");
+      } else {
+        Console.WriteLine("------------------------");
+        Console.WriteLine("-                      -");
+        Console.WriteLine("-         MISS!        -");
         Console.WriteLine("-                      -");
         Console.WriteLine("------------------------");
       }
